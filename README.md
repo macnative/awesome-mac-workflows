@@ -2,121 +2,122 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-> A curated list of native-first apps, automation tools, scripts, and resources for building a faster macOS workflow.
+> A cookbook of real macOS workflows — Shortcuts, Alfred workflows, Raycast extensions, Keyboard Maestro macros, and Finder Quick Actions — organized by the outcome they get you, not the app that runs them.
 
-Most "best Mac apps" lists are just long, unsorted catalogs. This one is scoped to **workflows** — the launchers, automation tools, and small utilities that chain together into a daily system, with a bias toward apps that are genuinely native (AppKit/SwiftUI) over Electron wrappers, and toward tools that are either free, open source, or a one-time purchase where a good option exists.
+Most Mac automation lists are organized by tool: here's every Alfred workflow, here's every Shortcut. That's useful for browsing, but useless when you actually have a problem — "I need to get these invoices out of my Downloads folder" doesn't care which app solves it. So this list is organized the other way: by outcome first, tool second. Each entry is tagged with what it needs to run.
 
-If you ship or discover something that belongs here, this list only stays useful if people keep it current — see the Contributing section below.
+- **Shortcut** — built with Apple's Shortcuts app (macOS and iOS)
+- **Alfred** — a workflow for Alfred (needs the Powerpack)
+- **Raycast** — an extension from the Raycast Store
+- **Keyboard Maestro** — a macro for Keyboard Maestro
+- **Quick Action** — a Finder right-click action, via Automator or Shortcuts
+- **Hazel** — a rule for Hazel's folder-watching automation
+- **App** — a small dedicated app that solves the outcome directly, no automation tool required
+
+Don't have one of these tools yet? [Shortcuts](https://support.apple.com/guide/shortcuts-mac/welcome/mac) ships free on every Mac, [Alfred](https://www.alfredapp.com), [Raycast](https://www.raycast.com), [Keyboard Maestro](https://www.keyboardmaestro.com), and [Hazel](https://www.noodlesoft.com/) are all one download away.
 
 ## Contents
 
-- [Window Management & Tiling](#window-management--tiling)
-- [Launchers & Quick Actions](#launchers--quick-actions)
-- [Automation & Scripting](#automation--scripting)
-- [Clipboard Managers](#clipboard-managers)
-- [Text Expansion & Snippets](#text-expansion--snippets)
-- [Menu Bar Management](#menu-bar-management)
-- [Screenshots & Screen Recording](#screenshots--screen-recording)
-- [Terminal, Shell & Dev Environment](#terminal-shell--dev-environment)
-- [File Management & Archiving](#file-management--archiving)
-- [Notes & Knowledge Management](#notes--knowledge-management)
-- [Calendar & Tasks](#calendar--tasks)
-- [Focus & Time Tracking](#focus--time-tracking)
-- [Shortcuts, Scripts & Learning Resources](#shortcuts-scripts--learning-resources)
+- [Start My Work Session](#start-my-work-session)
+- [Shut Down & End the Day](#shut-down--end-the-day)
+- [Prepare Screenshots for Publishing](#prepare-screenshots-for-publishing)
+- [Organize Downloaded Invoices & Receipts](#organize-downloaded-invoices--receipts)
+- [Tame the Downloads Folder](#tame-the-downloads-folder)
+- [Resize & Compress Images for the Web](#resize--compress-images-for-the-web)
+- [Clean Up Clipboard Text Before Pasting](#clean-up-clipboard-text-before-pasting)
+- [Capture a Quick Note or Idea](#capture-a-quick-note-or-idea)
+- [Jump Into a Dev Project](#jump-into-a-dev-project)
+- [Join a Meeting Fast](#join-a-meeting-fast)
+- [Plan & Review the Day](#plan--review-the-day)
+- [More Workflow Galleries](#more-workflow-galleries)
 - [Guides from MacNative](#guides-from-macnative)
 - [Communities](#communities)
 - [Related Awesome Lists](#related-awesome-lists)
 
-## Window Management & Tiling
+## Start My Work Session
 
-- [Rectangle](https://rectangleapp.com) - Free, open-source window snapping with keyboard shortcuts, inspired by Spectacle.
-- [Moom](https://manytricks.com/moom/) - Window arranging and resizing with custom layouts, a grid overlay, and multi-monitor support.
-- [yabai](https://github.com/koekeishiya/yabai) - Tiling window manager built on binary space partitioning, designed for scripting and keybinding.
-- [Amethyst](https://github.com/ianyh/Amethyst) - Automatic tiling window manager for macOS modeled after xmonad.
-- [AltTab](https://github.com/lwouis/alt-tab-macos) - Windows-style Alt-Tab window switcher with live thumbnails for every open window.
-- [Contexts](https://contexts.co) - Window switcher that lists every open window grouped by app, searchable by title.
+Open the right apps, silence the wrong notifications, and get to the first task without ten minutes of clicking around.
 
-## Launchers & Quick Actions
+- **Keyboard Maestro:** [Launch apps and windows at login or wake](https://forum.keyboardmaestro.com/t/how-to-customise-how-my-apps-and-windows-launch-on-start-up/31579) - Community macro recipes for opening a fixed set of apps, arranged into saved window positions, the moment you sit down each day.
+- **Shortcut:** [Set up a Focus on Mac](https://support.apple.com/guide/mac-help/set-up-a-focus-to-stay-on-task-mchl613dc43f/mac) - Apple's guide to building a Work Focus that Shortcuts' built-in "Set Focus" action can switch on as the first step of a start-of-day shortcut.
 
-- [Alfred](https://www.alfredapp.com) - The original macOS launcher; its Powerpack adds workflows, clipboard history, and custom actions.
-- [Raycast](https://www.raycast.com) - Command launcher with a large extension store, AI commands, snippets, and window management.
-- [Tinycast](https://tinycast.dev) - Free, open-source native launcher that runs Raycast extensions rendered as SwiftUI.
-- [Vicinae](https://www.vicinae.com) - Native, extensible launcher with a TypeScript SDK, clipboard history, and window management.
-- [SuperCmd](https://supercmd.sh/en) - Native Swift launcher combining AI agents, clipboard history, snippets, and window management.
-- [LaunchBar](https://www.obdev.at/products/launchbar/) - Long-running keyboard-driven launcher built around an "instant send" action pipeline.
+## Shut Down & End the Day
 
-## Automation & Scripting
+Close out cleanly so tomorrow starts from zero open windows, not forty.
 
-- [Shortcuts](https://support.apple.com/guide/shortcuts-mac/welcome/mac) - Apple's native automation app for building multi-step workflows across macOS and iOS.
-- [Keyboard Maestro](https://www.keyboardmaestro.com) - Macro and automation tool for triggering actions from hotkeys, schedules, or app events.
-- [Hammerspoon](https://www.hammerspoon.org) - Lua-scriptable bridge to macOS APIs for building custom automations and window layouts.
-- [BetterTouchTool](https://folivora.ai) - Gesture, trackpad, keyboard, and window-snapping customization with a built-in scripting layer.
-- [Hazel](https://www.noodlesoft.com/) - Rule-based file automation that watches folders and automatically sorts, renames, or tags files.
-- [Automator](https://support.apple.com/guide/automator/welcome/mac) - Apple's drag-and-drop workflow builder for chaining actions and Quick Actions.
+- **Alfred:** [Quit Application Workflow](https://www.alfredforum.com/topic/7954-quit-application-workflow/) - Community workflow that quits every open app, or all but a chosen few, in one keystroke.
 
-## Clipboard Managers
+Pair it with the automatic Trash and Downloads cleanup in the "Tame the Downloads Folder" section below for a Mac that resets itself overnight.
 
-- [Maccy](https://maccy.app) - Lightweight, open-source, search-as-you-type clipboard manager that stays out of the way.
-- [Paste](https://pasteapp.io) - Clipboard manager with iCloud sync, pinned items, and a visual history board.
-- [Clipy](https://github.com/Clipy/Clipy) - Open-source clipboard history manager and snippet tool inspired by ClipMenu.
+## Prepare Screenshots for Publishing
 
-## Text Expansion & Snippets
+Go from a raw screenshot to something you'd actually put in a blog post, changelog, or App Store listing.
 
-- [Espanso](https://espanso.org) - Privacy-first, cross-platform text expander written in Rust, fully scriptable.
-- [TextExpander](https://textexpander.com) - Mature snippet and expansion tool with shared team snippets and fill-in fields.
+- **Shortcut:** [Frame Screenshots](https://routinehub.co/shortcut/7923/) - Drops a real device frame around an iPhone or iPad screenshot from a library of nearly 300 frames, no image editor required.
+- **Shortcut:** [Upload to Imgur](https://routinehub.co/shortcut/1052/) - Uploads an image straight from the share sheet or Shortcuts and copies the hosted link, ready to paste into a post or issue.
 
-## Menu Bar Management
+## Organize Downloaded Invoices & Receipts
 
-- [Bartender](https://www.macbartender.com) - The original menu bar organizer; hide, reorder, and trigger menu bar items on rules.
-- [Ice](https://github.com/jordanbaird/Ice) - Free, open-source, GPL-licensed Bartender alternative with an Ice Bar for notched displays.
-- [Stats](https://github.com/exelban/stats) - Open-source system monitor for the menu bar covering CPU, RAM, disk, network, and sensors.
-- [iStat Menus](https://bjango.com/mac/istatmenus/) - Detailed system monitoring in the menu bar with historical graphs and sensor data.
+Stop invoices from piling up in Downloads — get them renamed and filed the moment they land.
 
-## Screenshots & Screen Recording
+- **Shortcut:** [Send Expense Receipt as PDF via Email](https://routinehub.co/shortcut/15587/) - Renames a receipt to `Expense-{occasion}-{date}-{location}.pdf`, files it in a dated folder, and emails it on, all from one run.
+- **Hazel:** [Rename a file based on its content](https://www.noodlesoft.com/forums/viewtopic.php?f=4&t=6844) - Forum recipe for having Hazel read the vendor name and invoice date out of a PDF and rename the file to match, without opening it.
+- **Hazel:** [Automatic invoice renaming with OCR](https://www.noodlesoft.com/forums/viewtopic.php?f=3&t=16084) - A more advanced version of the same idea that adds OCR text extraction, for scanned invoices that don't have selectable text.
+- **Shortcut:** [Get started with folder automation in macOS Tahoe](https://sixcolors.com/post/2025/08/get-started-with-folder-automation-in-macos-tahoe/) - How to trigger a Shortcut the moment a file is added to a folder, which is the Shortcuts-only alternative to Hazel for this exact outcome.
 
-- [CleanShot X](https://cleanshot.com) - Screenshot and screen recording tool with scrolling capture, annotation, and cloud sharing.
-- [Shottr](https://shottr.cc) - Fast, free screenshot tool with scrolling capture, annotation, and OCR.
-- [Kap](https://getkap.co) - Open-source screen recorder that exports directly to GIF, MP4, or WebM.
-- [Gifski](https://gifski.app) - Open-source GIF encoder that converts video into small, high-quality GIFs.
+## Tame the Downloads Folder
 
-## Terminal, Shell & Dev Environment
+The folder everything lands in first, and nothing ever leaves on its own.
 
-- [iTerm2](https://iterm2.com) - The long-standing power-user terminal replacement for macOS, with split panes and deep customization.
-- [Warp](https://www.warp.dev) - GPU-accelerated terminal with AI command search and a block-based output model.
-- [Ghostty](https://ghostty.org) - Fast, native, GPU-accelerated terminal emulator with minimal configuration.
-- [Homebrew](https://brew.sh) - The missing package manager for macOS, used to install most of the tools on this list.
-- [Oh My Zsh](https://ohmyz.sh) - Community-driven framework for managing zsh configuration, themes, and plugins.
-- [Starship](https://starship.rs) - Fast, customizable, cross-shell prompt written in Rust.
-- [OrbStack](https://orbstack.dev) - Fast, lightweight Docker and Linux VM replacement for Docker Desktop on macOS.
+- **Hazel:** [Use Automatic Deletion](https://www.noodlesoft.com/manual/hazel/hazel-basics/manage-your-trash/use-automatic-deletion/) - Official recipe for having Hazel sweep Downloads older than a set number of days straight to the Trash, and empty the Trash on its own schedule.
 
-## File Management & Archiving
+## Resize & Compress Images for the Web
 
-- [ForkLift](https://binarynights.com) - Dual-pane file manager with cloud storage and remote server connections.
-- [Path Finder](https://cocoatech.com) - Finder replacement with dual panes, a module system, and deep file inspection tools.
-- [Keka](https://www.keka.io/en/) - Free macOS file archiver supporting ZIP, 7z, and RAR extraction, including password-protected archives.
-- [DaisyDisk](https://daisydiskapp.com) - Visual disk-space analyzer that maps what's filling up your drive.
+Images that load fast and don't eat your CMS's storage quota, without opening Photoshop.
 
-## Notes & Knowledge Management
+- **Quick Action:** [ImageOptim](https://imageoptim.com) - Installs a Finder service so you can right-click any image (or a whole folder of them) and compress it in place, no app window needed.
+- **Quick Action:** [Compressing images and PDFs from the Finder context menu](https://danielsaidi.com/blog/2026/09/15/using-automator-workflows-to-compress-images-and-pdfs) - Walkthrough for building your own Automator Quick Action that batch-compresses a Finder selection on right-click.
+- **Shortcut:** [About transform actions in Shortcuts on Mac](https://support.apple.com/guide/shortcuts-mac/apd1d9413cfb/mac) - Apple's reference for the built-in Resize Image and Convert Image actions, enough to build a drag-and-drop "shrink for web" shortcut in a few minutes.
 
-- [Obsidian](https://obsidian.md) - Local-first Markdown knowledge base with backlinks, graph view, and a large plugin ecosystem.
-- [Bear](https://bear.app) - Native Markdown note-taking app with tags, cross-note linking, and fast search.
-- [Craft](https://www.craft.do) - Structured, block-based notes app with real-time collaboration and a native Mac feel.
-- [Logseq](https://logseq.com) - Open-source, local-first outliner for networked notes and daily journaling.
+## Clean Up Clipboard Text Before Pasting
 
-## Calendar & Tasks
+Paste a quote from a PDF or a webpage and get plain text out, not three inherited fonts.
 
-- [Fantastical](https://flexibits.com/fantastical) - Natural-language calendar app with a compact menu-bar view and task integration.
-- [BusyCal](https://www.busymac.com) - Calendar app with natural-language input, smart filters, and unified account support.
-- [Things 3](https://culturedcode.com/things/) - Native task manager built around Areas, Projects, and a daily Today view.
-- [OmniFocus](https://www.omnifocus.com) - Deep GTD-style task manager with custom perspectives and forecasting.
+- **Keyboard Maestro:** [Paste as Plain Text](https://forum.keyboardmaestro.com/t/paste-as-plain-text-in-microsoft-word-and-excel/34162) - A macro mapped to its own hotkey that strips formatting from whatever is on the clipboard before pasting, including into apps that resist it like Word and Excel.
 
-## Focus & Time Tracking
+Alfred, Raycast, and most clipboard managers also ship a built-in "paste as plain text" hotkey — check your tool's preferences before building a custom one.
 
-- [Focus](https://heyfocus.com) - Blocks distracting apps and websites during scheduled or on-demand focus sessions.
-- [Session](https://www.stayinsession.com) - Pomodoro-style focus timer with distraction blocking and session analytics.
-- [one sec](https://one-sec.app) - Adds a mindful pause before opening distracting apps, across Mac, iOS, and the browser.
+## Capture a Quick Note or Idea
 
-## Shortcuts, Scripts & Learning Resources
+Get a thought out of your head and into a system before it's gone, from wherever you are.
+
+- **Alfred:** [Obsidian Quickly](https://www.alfredforum.com/topic/23015-obsidian-quickly/) - Adds a new note to a chosen folder, appends to an "incoming tasks" note, or logs straight to today's daily note in Obsidian.
+- **Alfred:** [QuickNote](https://rknight.me/blog/quicknote-alfred-workflow/) - Type a keyword and your text, hit enter, and it's appended to a running scratch note — nothing to open, nothing to file later.
+
+## Jump Into a Dev Project
+
+Get from "I need to fix that bug" to an open editor, a running terminal, and the right branch in one keystroke.
+
+- **Alfred:** [alfred-pj](https://github.com/igrybkov/alfred-pj) - Detects a project's type and opens it in the matching editor, with modifier keys to send it to the terminal, Finder, or the repo's page instead.
+- **Raycast:** [Visual Studio Code — Recent Projects](https://www.raycast.com/thomas/visual-studio-code) - Jump straight to any recently opened VS Code workspace, or run editor commands, without switching to VS Code first.
+- **Alfred:** [alfred-iterm-workflow](https://github.com/caiogondim/alfred-iterm-workflow) - Opens a new iTerm2 tab, window, or pane in a chosen directory straight from Alfred's search bar.
+
+## Join a Meeting Fast
+
+No hunting through a calendar app for a link thirty seconds before a call starts.
+
+- **Raycast:** [Zoom](https://www.raycast.com/raycast/zoom) - Start an instant meeting, join one by ID, or jump into the next meeting on your calendar, all without opening Zoom.
+- **App:** [MeetingBar](https://github.com/leits/MeetingBar) - Free, open-source menu bar app that shows your current or next meeting at all times and joins it with one click or a global hotkey.
+
+## Plan & Review the Day
+
+A fixed five minutes at the start or end of the day instead of task management by vibes.
+
+- **Raycast:** [Things](https://www.raycast.com/loris/things) - Search, review, and quick-add Things 3 to-dos from Raycast, so a daily review doesn't require switching apps.
+
+## More Workflow Galleries
+
+Didn't find what you need above? These are the libraries where the entries on this page come from — browse them directly.
 
 - [RoutineHub](https://routinehub.co) - The largest community library for discovering and sharing Apple Shortcuts.
 - [MacStories Shortcuts Archive](https://www.macstories.net/shortcuts/) - 300+ curated, tested Shortcuts maintained by the MacStories team.
@@ -124,13 +125,13 @@ If you ship or discover something that belongs here, this list only stays useful
 
 ## Guides from MacNative
 
-Deep dives and comparisons from MacNative, a hand-picked directory of native macOS apps, that pair directly with the tools above.
+Deep dives and comparisons from MacNative, a hand-picked directory of native macOS apps, that pair directly with the workflows above.
 
-- [Raycast vs Tinycast vs Vicinae vs SuperCMD](https://macnative.io/blog/raycast-vs-tinycast-vs-vicinae-vs-supercmd) - A head-to-head comparison of the native Raycast alternatives listed above.
-- [Best Mac Clipboard Managers Without a Subscription](https://macnative.io/blog/mac-clipboard-managers-no-subscription) - One-time-purchase and free clipboard managers compared, including Maccy and Paste.
-- [Best Menu Bar Apps for Mac](https://macnative.io/blog/best-menu-bar-apps-for-mac) - A roundup of menu bar utilities worth keeping installed.
-- [Best Note-Taking Apps for Mac in 2026](https://macnative.io/blog/best-note-taking-apps-for-mac) - A current comparison of native note-taking apps for Mac.
-- [Scrolling Screenshot on Mac: Free Full-Page Capture](https://macnative.io/blog/how-to-take-a-scrolling-screenshot-on-mac) - How to capture full-page, scrolling screenshots without paid tools.
+- [Raycast vs Tinycast vs Vicinae vs SuperCMD](https://macnative.io/blog/raycast-vs-tinycast-vs-vicinae-vs-supercmd) - A head-to-head comparison of native Raycast alternatives, useful before committing to a launcher for the workflows above.
+- [Best Mac Clipboard Managers Without a Subscription](https://macnative.io/blog/mac-clipboard-managers-no-subscription) - One-time-purchase and free clipboard managers compared.
+- [Best Menu Bar Apps for Mac](https://macnative.io/blog/best-menu-bar-apps-for-mac) - A roundup of menu bar utilities worth keeping installed alongside MeetingBar.
+- [Best Note-Taking Apps for Mac in 2026](https://macnative.io/blog/best-note-taking-apps-for-mac) - A current comparison of native note-taking apps for quick-capture workflows.
+- [Scrolling Screenshot on Mac: Free Full-Page Capture](https://macnative.io/blog/how-to-take-a-scrolling-screenshot-on-mac) - How to capture full-page, scrolling screenshots before framing and uploading them.
 - [How We Pick Apps for MacNative](https://macnative.io/blog/how-we-pick-apps) - The editorial bar MacNative uses to decide which Mac apps make the cut.
 
 Browse the full [MacNative directory](https://macnative.io) for more hand-picked, native-first macOS apps, organized by [category](https://macnative.io/categories).
@@ -144,6 +145,8 @@ Browse the full [MacNative directory](https://macnative.io) for more hand-picked
 
 ## Related Awesome Lists
 
+- [awesome-raycast](https://github.com/j3lte/awesome-raycast) - Auto-generated, always-current list of every extension in the Raycast Store.
+- [awesome-alfred-workflows](https://github.com/derimagia/awesome-alfred-workflows) - A broader curated list of Alfred workflows across every category, not just outcome-based ones.
 - [awesome-mac](https://github.com/jaywcjlove/awesome-mac) - A much broader, general-purpose list of macOS apps and tools.
 - [awesome-macos-command-line](https://github.com/herrbischoff/awesome-macos-command-line) - Curated list of command-line tools and tricks specific to macOS.
 - [awesome-mac-launch-platforms](https://github.com/macnative/awesome-mac-launch-platforms) - Where to launch and promote a macOS app: directories, subreddits, and newsletters.

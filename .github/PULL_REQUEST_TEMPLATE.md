@@ -5,10 +5,11 @@
 **Checklist**
 
 - [ ] I've read [CONTRIBUTING.md](../CONTRIBUTING.md).
-- [ ] The link goes to the official site or repository.
-- [ ] The description is one sentence, starts with a capital letter, and ends with a period.
-- [ ] The entry is in the right category (or I've proposed a new one and added it to the table of contents).
-- [ ] This isn't already listed elsewhere in the README.
+- [ ] I tested this workflow myself and it works as described.
+- [ ] The link goes to the actual workflow/macro page, not a review or mirror.
+- [ ] The entry uses `- **Tag:** [Name](url) - Description.` with a valid tag.
+- [ ] The entry is under the right outcome (or I've proposed a new one and added it to the table of contents).
+- [ ] This exact URL isn't already linked anywhere else in the README.
 
 **Disclosure**
 
