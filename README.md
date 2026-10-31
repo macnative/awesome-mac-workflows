@@ -28,6 +28,7 @@ Don't have one of these tools yet? [Shortcuts](https://support.apple.com/guide/s
 - [Capture a Quick Note or Idea](#capture-a-quick-note-or-idea)
 - [Jump Into a Dev Project](#jump-into-a-dev-project)
 - [Join a Meeting Fast](#join-a-meeting-fast)
+- [Check Whether a Site Is Reachable](#check-whether-a-site-is-reachable)
 - [Plan & Review the Day](#plan--review-the-day)
 - [More Workflow Galleries](#more-workflow-galleries)
 - [Guides from MacNative](#guides-from-macnative)
@@ -108,6 +109,10 @@ No hunting through a calendar app for a link thirty seconds before a call starts
 
 - **Raycast:** [Zoom](https://www.raycast.com/raycast/zoom) - Start an instant meeting, join one by ID, or jump into the next meeting on your calendar, all without opening Zoom.
 - **App:** [MeetingBar](https://github.com/leits/MeetingBar) - Free, open-source menu bar app that shows your current or next meeting at all times and joins it with one click or a global hotkey.
+
+## Check Whether a Site Is Reachable
+
+- **Shortcut:** [Check a Site with Kilobat CLI](https://www.icloud.com/shortcuts/44c8fb2634b548d8a35a4c24646f5d8d) - Prompts for a hostname and shows a summary of the Mac’s connection check; requires macOS 14+, the Kilobat CLI and Shortcuts’ Allow Running Scripts setting.
 
 ## Plan & Review the Day
 
